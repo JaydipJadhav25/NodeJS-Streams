@@ -21,10 +21,14 @@ Transform: Duplex streams that can modify or transform the data as it is written
 
 #using streams it is passed in Header : 
 Transfer-Encoding:  chunked 
-Chunked transfer encoding is a streaming data transfer mechanism available in Hypertext Transfer Protocol (HTTP) version 1.1, defined in RFC 9112 §7.1. In chunked transfer encoding, the data stream is divided into a series of non-overlapping "chunks". The chunks are sent out and received independently of one another.
-
+Chunked transfer encoding is a streaming data transfer mechanism available in Hypertext Transfer Protocol (HTTP) version 1.1, 
+defined in RFC 9112 §7.1. In chunked transfer encoding, the data stream is divided into a series of non-overlapping "chunks".
+The chunks are sent out and received independently of one another.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Installation & setup :
 
 Run npm install express-status-monitor --save
+
 Before any other middleware or router add following line: app.use(require('express-status-monitor')());
+
 Run server and go to /status
