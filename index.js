@@ -3,10 +3,17 @@ import fs from "fs"
 //import status moniter
 import status from "express-status-monitor"
 
+//inbuilt packege
+import zlib from "node:zlib"
+
+
 const app = express()
 //set status moniter
 app.use(status());
 
+
+//stream read --> zipper -->  fs stream write
+fs.createReadStream("./sample.txt").pipe(zlib.createGzip()).pipe(fs.createWriteStream("./sample.zip"));
 
 
 
